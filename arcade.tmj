@@ -3219,8 +3219,8 @@
      "y": 128
     },
     {
-     "id": 105,
-     "name": "arcade-spacehuggers",
+     "id": 125,
+     "name": "arcade-doom",
      "type": "area",
      "class": "area",
      "x": 48,
@@ -3233,7 +3233,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://arcade.graf-cedric.de/spacehuggers/"
+       "value": "https://arcade.graf-cedric.de/doom/"
       },
       {
        "name": "openWebsiteAllowApi",
@@ -3248,18 +3248,23 @@
       {
        "name": "openWebsiteTriggerMessage",
        "type": "string",
-       "value": "[LEERTASTE] Space Huggers spielen"
+       "value": "[LEERTASTE] Doom spielen"
       },
       {
        "name": "openWebsiteWidth",
        "type": "int",
-       "value": 70
+       "value": 85
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "fullscreen; gamepad; autoplay"
       }
      ]
     },
     {
-     "id": 106,
-     "name": "arcade-radiusraid",
+     "id": 126,
+     "name": "arcade-freedoom",
      "type": "area",
      "class": "area",
      "x": 176,
@@ -3272,7 +3277,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://arcade.graf-cedric.de/radiusraid/"
+       "value": "https://arcade.graf-cedric.de/freedoom/"
       },
       {
        "name": "openWebsiteAllowApi",
@@ -3287,18 +3292,23 @@
       {
        "name": "openWebsiteTriggerMessage",
        "type": "string",
-       "value": "[LEERTASTE] Radius Raid spielen"
+       "value": "[LEERTASTE] Freedoom spielen"
       },
       {
        "name": "openWebsiteWidth",
        "type": "int",
-       "value": 70
+       "value": 85
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "fullscreen; gamepad; autoplay"
       }
      ]
     },
     {
-     "id": 107,
-     "name": "arcade-hexgl",
+     "id": 127,
+     "name": "arcade-n64",
      "type": "area",
      "class": "area",
      "x": 304,
@@ -3311,12 +3321,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://arcade.graf-cedric.de/hexgl/"
-      },
-      {
-       "name": "openWebsiteAllowApi",
-       "type": "bool",
-       "value": true
+       "value": "https://arcade.graf-cedric.de/n64/"
       },
       {
        "name": "openWebsiteTrigger",
@@ -3326,18 +3331,23 @@
       {
        "name": "openWebsiteTriggerMessage",
        "type": "string",
-       "value": "[LEERTASTE] HexGL spielen"
+       "value": "[LEERTASTE] Nintendo 64 \u00f6ffnen"
       },
       {
        "name": "openWebsiteWidth",
        "type": "int",
-       "value": 70
+       "value": 85
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "fullscreen; gamepad; autoplay"
       }
      ]
     },
     {
-     "id": 108,
-     "name": "arcade-dabg",
+     "id": 128,
+     "name": "arcade-nes",
      "type": "area",
      "class": "area",
      "x": 48,
@@ -3350,7 +3360,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://arcade.graf-cedric.de/dabg/"
+       "value": "https://arcade.graf-cedric.de/nes/"
       },
       {
        "name": "openWebsiteTrigger",
@@ -3360,18 +3370,23 @@
       {
        "name": "openWebsiteTriggerMessage",
        "type": "string",
-       "value": "[LEERTASTE] Double Action Blaster Guys spielen"
+       "value": "[LEERTASTE] NES \u00f6ffnen"
       },
       {
        "name": "openWebsiteWidth",
        "type": "int",
-       "value": 70
+       "value": 85
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "fullscreen; gamepad; autoplay"
       }
      ]
     },
     {
-     "id": 109,
-     "name": "arcade-rhde",
+     "id": 129,
+     "name": "arcade-snes",
      "type": "area",
      "class": "area",
      "x": 144,
@@ -3384,7 +3399,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://arcade.graf-cedric.de/rhde/"
+       "value": "https://arcade.graf-cedric.de/snes/"
       },
       {
        "name": "openWebsiteTrigger",
@@ -3394,18 +3409,23 @@
       {
        "name": "openWebsiteTriggerMessage",
        "type": "string",
-       "value": "[LEERTASTE] RHDE: Furniture Fight spielen"
+       "value": "[LEERTASTE] Super Nintendo \u00f6ffnen"
       },
       {
        "name": "openWebsiteWidth",
        "type": "int",
-       "value": 70
+       "value": 85
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "fullscreen; gamepad; autoplay"
       }
      ]
     },
     {
-     "id": 110,
-     "name": "arcade-thwaite",
+     "id": 130,
+     "name": "arcade-gameboy",
      "type": "area",
      "class": "area",
      "x": 240,
@@ -3418,7 +3438,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://arcade.graf-cedric.de/thwaite/"
+       "value": "https://arcade.graf-cedric.de/gameboy/"
       },
       {
        "name": "openWebsiteTrigger",
@@ -3428,18 +3448,23 @@
       {
        "name": "openWebsiteTriggerMessage",
        "type": "string",
-       "value": "[LEERTASTE] Thwaite spielen"
+       "value": "[LEERTASTE] Game Boy \u00f6ffnen"
       },
       {
        "name": "openWebsiteWidth",
        "type": "int",
-       "value": 70
+       "value": 85
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "fullscreen; gamepad; autoplay"
       }
      ]
     },
     {
-     "id": 111,
-     "name": "arcade-nova",
+     "id": 131,
+     "name": "arcade-gba",
      "type": "area",
      "class": "area",
      "x": 336,
@@ -3452,7 +3477,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://arcade.graf-cedric.de/nova/"
+       "value": "https://arcade.graf-cedric.de/gba/"
       },
       {
        "name": "openWebsiteTrigger",
@@ -3462,18 +3487,23 @@
       {
        "name": "openWebsiteTriggerMessage",
        "type": "string",
-       "value": "[LEERTASTE] Nova the Squirrel spielen"
+       "value": "[LEERTASTE] Game Boy Advance \u00f6ffnen"
       },
       {
        "name": "openWebsiteWidth",
        "type": "int",
-       "value": 70
+       "value": 85
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "fullscreen; gamepad; autoplay"
       }
      ]
     },
     {
-     "id": 112,
-     "name": "arcade-croom",
+     "id": 132,
+     "name": "arcade-megadrive",
      "type": "area",
      "class": "area",
      "x": 432,
@@ -3486,7 +3516,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://arcade.graf-cedric.de/croom/"
+       "value": "https://arcade.graf-cedric.de/megadrive/"
       },
       {
        "name": "openWebsiteTrigger",
@@ -3496,18 +3526,23 @@
       {
        "name": "openWebsiteTriggerMessage",
        "type": "string",
-       "value": "[LEERTASTE] Concentration Room spielen"
+       "value": "[LEERTASTE] Mega Drive \u00f6ffnen"
       },
       {
        "name": "openWebsiteWidth",
        "type": "int",
-       "value": 70
+       "value": 85
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "fullscreen; gamepad; autoplay"
       }
      ]
     },
     {
-     "id": 113,
-     "name": "arcade-libbet",
+     "id": 133,
+     "name": "arcade-playstation",
      "type": "area",
      "class": "area",
      "x": 528,
@@ -3520,7 +3555,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://arcade.graf-cedric.de/libbet/"
+       "value": "https://arcade.graf-cedric.de/playstation/"
       },
       {
        "name": "openWebsiteTrigger",
@@ -3530,17 +3565,22 @@
       {
        "name": "openWebsiteTriggerMessage",
        "type": "string",
-       "value": "[LEERTASTE] Libbet and the Magic Floor spielen"
+       "value": "[LEERTASTE] PlayStation \u00f6ffnen"
       },
       {
        "name": "openWebsiteWidth",
        "type": "int",
-       "value": 70
+       "value": 85
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "fullscreen; gamepad; autoplay"
       }
      ]
     },
     {
-     "id": 114,
+     "id": 134,
      "name": "arcade-highscores",
      "type": "area",
      "class": "area",
@@ -3569,7 +3609,12 @@
       {
        "name": "openWebsiteWidth",
        "type": "int",
-       "value": 70
+       "value": 85
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "fullscreen; gamepad; autoplay"
       }
      ]
     }
@@ -4309,7 +4354,7 @@
   }
  ],
  "nextlayerid": 62,
- "nextobjectid": 115,
+ "nextobjectid": 135,
  "orientation": "orthogonal",
  "properties": [
   {
@@ -4320,7 +4365,7 @@
   {
    "name": "mapDescription",
    "type": "string",
-   "value": "Spielhalle mit Bestenliste und Retro-Ecke"
+   "value": "Spielhalle mit Doom-Bestenliste und Konsolen f\u00fcr eigene Spiele"
   },
   {
    "name": "mapImage",
