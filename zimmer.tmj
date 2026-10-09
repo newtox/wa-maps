@@ -1559,7 +1559,7 @@
       {
        "name": "exitUrl",
        "type": "string",
-       "value": "office.wam"
+       "value": "/~/newtox-wa-maps/office.wam"
       }
      ]
     },
@@ -1947,7 +1947,7 @@
   {
    "name": "mapDescription",
    "type": "string",
-   "value": "Vorlage f\u00fcr eigene Zimmer"
+   "value": "Vorlage für eigene Zimmer"
   },
   {
    "name": "mapImage",

@@ -1559,7 +1559,7 @@
       {
        "name": "exitUrl",
        "type": "string",
-       "value": "office.wam"
+       "value": "/~/newtox-wa-maps/office.wam"
       }
      ]
     },
