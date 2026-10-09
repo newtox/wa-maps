@@ -3246,11 +3246,6 @@
        "value": "onaction"
       },
       {
-       "name": "openWebsiteTriggerMessage",
-       "type": "string",
-       "value": "[LEERTASTE] Pac-Man spielen"
-      },
-      {
        "name": "openWebsiteWidth",
        "type": "int",
        "value": 85
@@ -3288,11 +3283,6 @@
        "name": "openWebsiteTrigger",
        "type": "string",
        "value": "onaction"
-      },
-      {
-       "name": "openWebsiteTriggerMessage",
-       "type": "string",
-       "value": "[LEERTASTE] Doom spielen"
       },
       {
        "name": "openWebsiteWidth",
@@ -3334,11 +3324,6 @@
        "value": "onaction"
       },
       {
-       "name": "openWebsiteTriggerMessage",
-       "type": "string",
-       "value": "[LEERTASTE] Freedoom spielen"
-      },
-      {
        "name": "openWebsiteWidth",
        "type": "int",
        "value": 85
@@ -3371,11 +3356,6 @@
        "name": "openWebsiteTrigger",
        "type": "string",
        "value": "onaction"
-      },
-      {
-       "name": "openWebsiteTriggerMessage",
-       "type": "string",
-       "value": "[LEERTASTE] Nintendo 64 \u00f6ffnen"
       },
       {
        "name": "openWebsiteWidth",
@@ -3412,11 +3392,6 @@
        "value": "onaction"
       },
       {
-       "name": "openWebsiteTriggerMessage",
-       "type": "string",
-       "value": "[LEERTASTE] NES \u00f6ffnen"
-      },
-      {
        "name": "openWebsiteWidth",
        "type": "int",
        "value": 85
@@ -3449,11 +3424,6 @@
        "name": "openWebsiteTrigger",
        "type": "string",
        "value": "onaction"
-      },
-      {
-       "name": "openWebsiteTriggerMessage",
-       "type": "string",
-       "value": "[LEERTASTE] Super Nintendo \u00f6ffnen"
       },
       {
        "name": "openWebsiteWidth",
@@ -3490,11 +3460,6 @@
        "value": "onaction"
       },
       {
-       "name": "openWebsiteTriggerMessage",
-       "type": "string",
-       "value": "[LEERTASTE] Game Boy \u00f6ffnen"
-      },
-      {
        "name": "openWebsiteWidth",
        "type": "int",
        "value": 85
@@ -3527,11 +3492,6 @@
        "name": "openWebsiteTrigger",
        "type": "string",
        "value": "onaction"
-      },
-      {
-       "name": "openWebsiteTriggerMessage",
-       "type": "string",
-       "value": "[LEERTASTE] Game Boy Advance \u00f6ffnen"
       },
       {
        "name": "openWebsiteWidth",
@@ -3568,11 +3528,6 @@
        "value": "onaction"
       },
       {
-       "name": "openWebsiteTriggerMessage",
-       "type": "string",
-       "value": "[LEERTASTE] Mega Drive \u00f6ffnen"
-      },
-      {
        "name": "openWebsiteWidth",
        "type": "int",
        "value": 85
@@ -3607,11 +3562,6 @@
        "value": "onaction"
       },
       {
-       "name": "openWebsiteTriggerMessage",
-       "type": "string",
-       "value": "[LEERTASTE] PlayStation \u00f6ffnen"
-      },
-      {
        "name": "openWebsiteWidth",
        "type": "int",
        "value": 85
@@ -3644,11 +3594,6 @@
        "name": "openWebsiteTrigger",
        "type": "string",
        "value": "onaction"
-      },
-      {
-       "name": "openWebsiteTriggerMessage",
-       "type": "string",
-       "value": "[LEERTASTE] Bestenliste ansehen"
       },
       {
        "name": "openWebsiteWidth",
