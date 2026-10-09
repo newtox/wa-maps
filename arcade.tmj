@@ -455,23 +455,8 @@
     3,
     3,
     0,
-    0,
     3,
     3,
-    0,
-    0,
-    3,
-    3,
-    0,
-    0,
-    3,
-    3,
-    3,
-    0,
-    0,
-    0,
-    0,
-    0,
     0,
     3,
     3,
@@ -479,14 +464,29 @@
     3,
     3,
     0,
+    3,
+    3,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
     0,
     3,
     3,
     0,
+    3,
+    3,
     0,
     3,
     3,
     0,
+    3,
+    3,
+    0,
+    3,
+    3,
     0,
     3,
     3,
@@ -2571,17 +2571,17 @@
       0,
       0,
       0,
+      3040,
+      3041,
+      0,
       2974,
       2975,
-      0,
       0,
       2976,
       2977,
       0,
-      0,
       2978,
       2979,
-      0,
       0,
       3028,
       3029,
@@ -2595,17 +2595,17 @@
       0,
       0,
       0,
+      3058,
+      3059,
+      0,
       2992,
       2993,
-      0,
       0,
       2994,
       2995,
       0,
-      0,
       2996,
       2997,
-      0,
       0,
       3046,
       3047,
@@ -3219,11 +3219,55 @@
      "y": 128
     },
     {
-     "id": 125,
-     "name": "arcade-doom",
+     "id": 135,
+     "name": "arcade-pacman",
      "type": "area",
      "class": "area",
      "x": 48,
+     "y": 192,
+     "width": 96,
+     "height": 48,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://arcade.graf-cedric.de/pacman/"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsiteTrigger",
+       "type": "string",
+       "value": "onaction"
+      },
+      {
+       "name": "openWebsiteTriggerMessage",
+       "type": "string",
+       "value": "[LEERTASTE] Pac-Man spielen"
+      },
+      {
+       "name": "openWebsiteWidth",
+       "type": "int",
+       "value": 85
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "fullscreen; gamepad; autoplay"
+      }
+     ]
+    },
+    {
+     "id": 136,
+     "name": "arcade-doom",
+     "type": "area",
+     "class": "area",
+     "x": 144,
      "y": 192,
      "width": 96,
      "height": 48,
@@ -3263,11 +3307,11 @@
      ]
     },
     {
-     "id": 126,
+     "id": 137,
      "name": "arcade-freedoom",
      "type": "area",
      "class": "area",
-     "x": 176,
+     "x": 240,
      "y": 192,
      "width": 96,
      "height": 48,
@@ -3307,11 +3351,11 @@
      ]
     },
     {
-     "id": 127,
+     "id": 138,
      "name": "arcade-n64",
      "type": "area",
      "class": "area",
-     "x": 304,
+     "x": 336,
      "y": 192,
      "width": 96,
      "height": 48,
@@ -3346,7 +3390,7 @@
      ]
     },
     {
-     "id": 128,
+     "id": 139,
      "name": "arcade-nes",
      "type": "area",
      "class": "area",
@@ -3385,7 +3429,7 @@
      ]
     },
     {
-     "id": 129,
+     "id": 140,
      "name": "arcade-snes",
      "type": "area",
      "class": "area",
@@ -3424,7 +3468,7 @@
      ]
     },
     {
-     "id": 130,
+     "id": 141,
      "name": "arcade-gameboy",
      "type": "area",
      "class": "area",
@@ -3463,7 +3507,7 @@
      ]
     },
     {
-     "id": 131,
+     "id": 142,
      "name": "arcade-gba",
      "type": "area",
      "class": "area",
@@ -3502,7 +3546,7 @@
      ]
     },
     {
-     "id": 132,
+     "id": 143,
      "name": "arcade-megadrive",
      "type": "area",
      "class": "area",
@@ -3541,7 +3585,7 @@
      ]
     },
     {
-     "id": 133,
+     "id": 144,
      "name": "arcade-playstation",
      "type": "area",
      "class": "area",
@@ -3580,7 +3624,7 @@
      ]
     },
     {
-     "id": 134,
+     "id": 145,
      "name": "arcade-highscores",
      "type": "area",
      "class": "area",
@@ -3722,17 +3766,17 @@
       0,
       0,
       0,
+      3022,
+      3023,
+      0,
       2956,
       2957,
-      0,
       0,
       2958,
       2959,
       0,
-      0,
       2960,
       2961,
-      0,
       0,
       0,
       0,
@@ -4354,7 +4398,7 @@
   }
  ],
  "nextlayerid": 62,
- "nextobjectid": 135,
+ "nextobjectid": 146,
  "orientation": "orthogonal",
  "properties": [
   {
@@ -4365,7 +4409,7 @@
   {
    "name": "mapDescription",
    "type": "string",
-   "value": "Spielhalle mit Doom-Bestenliste und Konsolen f\u00fcr eigene Spiele"
+   "value": "Spielhalle mit Pac-Man, Doom, Bestenliste und Konsolen f\u00fcr eigene Spiele"
   },
   {
    "name": "mapImage",
