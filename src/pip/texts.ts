@@ -24,6 +24,7 @@ export const JOKES: Record<Lang, string[]> = {
         "I wanted to tell a joke about video calls, but I was muted the whole time.",
         "Why doesn't the server have friends? It only responds to requests.",
         "What do you call a jester without bells? A consultant.",
+        "The count asked me if I could be serious. I said: \"Only after 6 pm, my lord, and that costs extra.\"",
         "Why do programmers sit in the dark? Light is a feature, scheduled for next sprint.",
     ],
 };
