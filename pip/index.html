@@ -43,6 +43,7 @@
   .name { position: absolute; top: -14px; left: 130px; background: var(--accent); border: 2px solid var(--line); border-radius: 8px; padding: 1px 10px; font-weight: 700; font-size: 13px; letter-spacing: .02em; }
   .main { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
   .text { flex: 1; overflow-y: auto; white-space: pre-line; padding-top: 4px; padding-right: 6px; cursor: pointer; }
+  .text em { color: var(--muted); }
   .text .caret { display: inline-block; width: 8px; animation: blink .8s steps(1) infinite; color: var(--line); }
   @keyframes blink { 50% { opacity: 0; } }
   .options { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 6px; margin-top: 8px; }

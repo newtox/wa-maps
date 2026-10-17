@@ -29,6 +29,8 @@ const boxEl = document.getElementById("box")!;
 
 let lang: Lang = "de";
 let name = "";
+/** Graf Cedric himself: Pip greets him like the master of the house. */
+let count = false;
 let memory: Memory = { met: false, riddles: [], streak: 0, best: 0 };
 let typing: number | undefined;
 let finishTyping: (() => void) | undefined;
@@ -75,6 +77,7 @@ function say(text: string, options: Option[]): void {
         typing = undefined;
         finishTyping = undefined;
         textEl.textContent = text;
+        textEl.innerHTML = textEl.innerHTML.replace(/\*([^*]+)\*/g, "<em>$1</em>"); // *verbeugt sich* → stage direction
         boxEl.classList.remove("talking");
         renderOptions();
     };
@@ -118,7 +121,31 @@ window.addEventListener("keydown", (e) => {
 const back = (): Option => ({ label: t("↩ Zurück", "↩ Back"), run: menu });
 const bye = (): Option => ({ label: t("👋 Tschüss", "👋 Bye"), run: farewell });
 
+/** Pip's greetings for Graf Cedric. */
+function countGreeting(): string {
+    const h = new Date().getHours();
+    if (!memory.met) {
+        return t(
+            "*verbeugt sich so tief, dass die Glöckchen den Boden küssen* Euer Hochwohlgeboren, Graf Cedric! Viva la Graf Cedric! Womit darf Euer treuer Narr dienen?",
+            "*bows so low the bells kiss the ground* Your Excellency, Count Cedric! How may your loyal fool serve you?",
+        );
+    }
+    if (h < 6) return t("Herr Graf, zu so später Stunde? Selbst Euer Schloss schläft schon. Aber Euer Narr ist stets zu Diensten!", "My lord, at this hour? Even your castle is asleep. But your fool is always at your service!");
+    if (h < 11) return t("Guten Morgen, Herr Graf! Der Hofkaffee steht bereit, die Untertanen leider noch nicht.", "Good morning, my lord! The court coffee is ready, your subjects sadly are not.");
+    return pick([
+        t("Der Graf persönlich! Schnell, alle so tun, als würden sie arbeiten!", "The count himself! Quick, everyone pretend to work!"),
+        t("Euer Exzellenz! Ich habe extra die Glöckchen poliert.", "Your Excellency! I polished my bells just for you."),
+        t("*Fanfare* Tröööt! Graf Cedric betritt den Garten! … Die Fanfare war ich. Gefällt sie Euch?", "*Fanfare* Toot-toot! Count Cedric enters the garden! … That fanfare was me. Do you like it?"),
+        t("Herr Graf! Wie gut, dass Ihr kommt, ich habe einen neuen Witz, und er ist fast nicht über Euch.", "My lord! Good that you're here, I have a new joke, and it's barely about you."),
+        t("Ah, der Herr des Hauses! Sagt, soll ich heute witzig oder weise sein? Beides kostet extra.", "Ah, the master of the house! Shall I be funny or wise today? Both cost extra."),
+        t("VIVA LA GRAF CEDRIC! 🎺 *flüstert* Ich weiß, Ihr mögt das nicht. Genau deshalb.", "VIVA LA GRAF CEDRIC! 🎺 *whispers* I know you don't like it. That's exactly why."),
+        t("Viva la Graf Cedric! Viva la Revolution! … Moment, das schließt sich irgendwie aus.", "Viva la Graf Cedric! Viva la revolution! … Hang on, those two don't really go together."),
+        t("*klingelt dreimal* Das Volk ruft: Viva la Graf Cedric! … Das Volk bin übrigens ich. Ganz allein.", "*rings three times* The people cry: Viva la Graf Cedric! … The people is me, by the way. All alone."),
+    ]);
+}
+
 function greeting(): string {
+    if (count) return countGreeting();
     const h = new Date().getHours();
     if (!memory.met) {
         return t(
@@ -139,9 +166,25 @@ function menu(): void {
         { label: t("🔮 Orakel des Tages", "🔮 Oracle of the day"), run: oracle },
         { label: t(`🧩 Rätsel (${solved}/${RIDDLES.length})`, `🧩 Riddle (${solved}/${RIDDLES.length})`), run: riddle },
         { label: t("🪙 Münzwurf", "🪙 Coin toss"), run: coin },
+        ...(count ? [{ label: t("👑 Huldigung", "👑 Homage"), run: homage }] : []),
         bye(),
     ]);
     if (!memory.met) void remember({ met: true });
+}
+
+/** Only for Graf Cedric: Pip pays homage, more or less sincerely. */
+function homage(): void {
+    say(
+        pick([
+            t("*räuspert sich* Hört, hört! Graf Cedric, Herr über Büro, Garten und mindestens eine Kaffeemaschine! VIVA LA GRAF CEDRIC!", "*clears throat* Hear ye! Count Cedric, lord of office, garden and at least one coffee machine! VIVA LA GRAF CEDRIC!"),
+            t("Ich habe Euch ein Gedicht geschrieben: „Der Graf ist groß, der Graf ist weise, er läuft im Büro so manche Kreise.“ … Ich arbeite noch dran.", "I wrote you a poem: \"The count is great, the count is wise, he walks the office in circles of all size.\" … Still working on it."),
+            t("*wirft Konfetti* Drei Hochrufe auf den Grafen! Hoch! Hoch! … Hoch. Die anderen sind wohl in einem Meeting.", "*throws confetti* Three cheers for the count! Hip hip! Hip hip! … Hip. The others must be in a meeting."),
+            t("Viva la Graf Cedric! Viva la Graf Cedric! *singt immer lauter* VIVA LAAA … gut, ich hör ja schon auf.", "Viva la Graf Cedric! Viva la Graf Cedric! *sings louder and louder* VIVA LAAA … fine, I'll stop."),
+            t("Herr Graf, im Namen aller Pixel dieses Gartens: Danke, dass Ihr uns erschaffen habt. Die Blumen lassen grüßen. Der Baum ist noch beleidigt.", "My lord, on behalf of every pixel in this garden: thank you for creating us. The flowers say hi. The tree is still sulking."),
+            t("*hält ein Schild hoch* „Graf Cedric for President“. Ich weiß, Ihr seid schon Graf. Aber man kann ja träumen.", "*holds up a sign* \"Count Cedric for President\". I know you're already a count. But one can dream."),
+        ]),
+        [{ label: t("👑 Mehr Huldigung!", "👑 More homage!"), run: homage, primary: true }, back()],
+    );
 }
 
 function joke(): void {
@@ -154,7 +197,8 @@ function oracle(): void {
     let h = 0;
     for (const ch of `${name}|${day}`) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
     const list = ORACLE[lang];
-    say(t(`🔮 Pip schließt die Augen und murmelt …\n„${list[h % list.length]}“`, `🔮 Pip closes his eyes and mumbles …\n"${list[h % list.length]}"`), [back(), bye()]);
+    const intro = count ? t("🔮 Für Euch, Herr Graf, befrage ich die vornehmsten Sterne …", "🔮 For you, my lord, I consult the noblest stars …") : t("🔮 Pip schließt die Augen und murmelt …", "🔮 Pip closes his eyes and mumbles …");
+    say(t(`${intro}\n„${list[h % list.length]}“`, `${intro}\n"${list[h % list.length]}"`), [back(), bye()]);
 }
 
 function riddle(): void {
@@ -217,13 +261,20 @@ function toss(heads: boolean): void {
         const lost = memory.streak;
         void remember({ streak: 0 });
         say(
-            t(`Es ist … ${side}. ${lost > 2 ? `Autsch, eine ${lost}er-Serie dahin!` : "Pech gehabt!"} Der Narr gewinnt immer.`, `It's … ${side}. ${lost > 2 ? `Ouch, a streak of ${lost} gone!` : "Bad luck!"} The jester always wins.`),
+            count
+                ? t(`Es ist … ${side}. ${lost > 2 ? `Eine ${lost}er-Serie dahin! ` : ""}Verzeiht, Herr Graf, die Münze kennt keinen Adel.`, `It's … ${side}. ${lost > 2 ? `A streak of ${lost} gone! ` : ""}Forgive me, my lord, the coin knows no nobility.`)
+                : t(`Es ist … ${side}. ${lost > 2 ? `Autsch, eine ${lost}er-Serie dahin!` : "Pech gehabt!"} Der Narr gewinnt immer.`, `It's … ${side}. ${lost > 2 ? `Ouch, a streak of ${lost} gone!` : "Bad luck!"} The jester always wins.`),
             [{ label: t("🪙 Revanche!", "🪙 Rematch!"), run: coin, primary: true }, back()],
         );
     }
 }
 
 function farewell(): void {
+    if (count) {
+        say(t("Lebt wohl, Herr Graf! *verbeugt sich und stolpert über die eigenen Schuhe*", "Farewell, my lord! *bows and trips over his own shoes*"), []);
+        setTimeout(() => void closeDialog(), 2600);
+        return;
+    }
     say(pick([t("Bis bald! Und lach mal wieder.", "See you! And laugh more often."), t("Adieu! Grüß den Grafen von mir.", "Farewell! Say hi to the count.")]), []);
     setTimeout(() => void closeDialog(), 2200);
 }
@@ -235,6 +286,8 @@ WA.onInit()
         lang = (WA.player.language ?? "de").toLowerCase().startsWith("de") ? "de" : "en";
         document.documentElement.lang = lang;
         name = WA.player.name;
+        // his personal tag from the admin server ("Graf Cedric" → "@grafcedric"), or his woka name
+        count = (WA.player.tags ?? []).includes("@grafcedric") || /graf\s*cedric/i.test(name);
         const saved = WA.player.state.pip as Partial<Memory> | undefined;
         if (saved && typeof saved === "object") memory = { ...memory, ...saved, riddles: Array.isArray(saved.riddles) ? saved.riddles : [] };
         menu();
