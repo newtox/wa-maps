@@ -126,7 +126,7 @@ function countGreeting(): string {
     const h = new Date().getHours();
     if (!memory.met) {
         return t(
-            "*verbeugt sich so tief, dass die Glöckchen den Boden küssen* Euer Hochwohlgeboren, Graf Cedric! Viva la Graf Cedric! Womit darf Euer treuer Narr dienen?",
+            "*verbeugt sich so tief, dass die Glöckchen den Boden küssen* Euer Hochwohlgeboren, Graf Cedric! Viva Graf Cedric! Womit darf Euer treuer Narr dienen?",
             "*bows so low the bells kiss the ground* Your Excellency, Count Cedric! How may your loyal fool serve you?",
         );
     }
@@ -138,9 +138,10 @@ function countGreeting(): string {
         t("*Fanfare* Tröööt! Graf Cedric betritt den Garten! … Die Fanfare war ich. Gefällt sie Euch?", "*Fanfare* Toot-toot! Count Cedric enters the garden! … That fanfare was me. Do you like it?"),
         t("Herr Graf! Wie gut, dass Ihr kommt, ich habe einen neuen Witz, und er ist fast nicht über Euch.", "My lord! Good that you're here, I have a new joke, and it's barely about you."),
         t("Ah, der Herr des Hauses! Sagt, soll ich heute witzig oder weise sein? Beides kostet extra.", "Ah, the master of the house! Shall I be funny or wise today? Both cost extra."),
-        t("VIVA LA GRAF CEDRIC! 🎺 *flüstert* Ich weiß, Ihr mögt das nicht. Genau deshalb.", "VIVA LA GRAF CEDRIC! 🎺 *whispers* I know you don't like it. That's exactly why."),
-        t("Viva la Graf Cedric! Viva la Revolution! … Moment, das schließt sich irgendwie aus.", "Viva la Graf Cedric! Viva la revolution! … Hang on, those two don't really go together."),
-        t("*klingelt dreimal* Das Volk ruft: Viva la Graf Cedric! … Das Volk bin übrigens ich. Ganz allein.", "*rings three times* The people cry: Viva la Graf Cedric! … The people is me, by the way. All alone."),
+        t("VIVA GRAF CEDRIC! 🎺 *flüstert* Ich weiß, Ihr mögt das nicht. Genau deshalb.", "VIVA GRAF CEDRIC! 🎺 *whispers* I know you don't like it. That's exactly why."),
+        t("Viva Graf Cedric! Viva la Revolution! … Moment, das schließt sich irgendwie aus.", "Viva Graf Cedric! Viva la revolution! … Hang on, those two don't really go together."),
+        t("Die Mädelinos lassen grüßen, Herr Graf! … Na gut, ich hab sie nicht gefragt. Aber sie hätten es sicher gewollt.", "The Mädelinos send their regards, my lord! … Fine, I didn't ask them. But they surely would have wanted to."),
+        t("*klingelt dreimal* Die Mädelinos rufen: Viva Graf Cedric! … Gut, gerade bin nur ich da. Aber im Herzen sind die Mädelinos immer dabei.", "*rings three times* The Mädelinos cry: Viva Graf Cedric! … Fine, right now it's just me. But in spirit the Mädelinos are always here."),
     ]);
 }
 
@@ -176,10 +177,10 @@ function menu(): void {
 function homage(): void {
     say(
         pick([
-            t("*räuspert sich* Hört, hört! Graf Cedric, Herr über Büro, Garten und mindestens eine Kaffeemaschine! VIVA LA GRAF CEDRIC!", "*clears throat* Hear ye! Count Cedric, lord of office, garden and at least one coffee machine! VIVA LA GRAF CEDRIC!"),
+            t("*räuspert sich* Hört, hört! Graf Cedric, Herr über Büro, Garten und mindestens eine Kaffeemaschine! VIVA GRAF CEDRIC!", "*clears throat* Hear ye! Count Cedric, lord of office, garden and at least one coffee machine! VIVA GRAF CEDRIC!"),
             t("Ich habe Euch ein Gedicht geschrieben: „Der Graf ist groß, der Graf ist weise, er läuft im Büro so manche Kreise.“ … Ich arbeite noch dran.", "I wrote you a poem: \"The count is great, the count is wise, he walks the office in circles of all size.\" … Still working on it."),
-            t("*wirft Konfetti* Drei Hochrufe auf den Grafen! Hoch! Hoch! … Hoch. Die anderen sind wohl in einem Meeting.", "*throws confetti* Three cheers for the count! Hip hip! Hip hip! … Hip. The others must be in a meeting."),
-            t("Viva la Graf Cedric! Viva la Graf Cedric! *singt immer lauter* VIVA LAAA … gut, ich hör ja schon auf.", "Viva la Graf Cedric! Viva la Graf Cedric! *sings louder and louder* VIVA LAAA … fine, I'll stop."),
+            t("*wirft Konfetti* Drei Hochrufe auf den Grafen! Hoch! Hoch! … Hoch. Die Mädelinos sind wohl in einem Meeting.", "*throws confetti* Three cheers for the count! Hip hip! Hip hip! … Hip. The Mädelinos must be in a meeting."),
+            t("Viva Graf Cedric! Viva Graf Cedric! *singt immer lauter* VIVA GRAAAF … gut, ich hör ja schon auf.", "Viva Graf Cedric! Viva Graf Cedric! *sings louder and louder* VIVA GRAAAF … fine, I'll stop."),
             t("Herr Graf, im Namen aller Pixel dieses Gartens: Danke, dass Ihr uns erschaffen habt. Die Blumen lassen grüßen. Der Baum ist noch beleidigt.", "My lord, on behalf of every pixel in this garden: thank you for creating us. The flowers say hi. The tree is still sulking."),
             t("*hält ein Schild hoch* „Graf Cedric for President“. Ich weiß, Ihr seid schon Graf. Aber man kann ja träumen.", "*holds up a sign* \"Count Cedric for President\". I know you're already a count. But one can dream."),
         ]),
