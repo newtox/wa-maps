@@ -41,7 +41,7 @@ export const ORACLE: Record<Lang, string[]> = {
         "Du wirst heute jemanden zum Lachen bringen. Notfalls dich selbst.",
         "Das Glück ist mit dir, solange du nicht Zahl sagst.",
         "Heute ist ein guter Tag, um eine Pflanze zu gießen. Sie hat es verdient.",
-        "Ein Geheimnis liegt im Garten verborgen. Nein, nicht unter mir.",
+        "Auf dem Whiteboard hinter mir steht ein Geheimnis. Nein, nicht umdrehen.",
         "Wer heute als Erster „Guten Morgen“ sagt, gewinnt nichts, ist aber trotzdem ein guter Mensch.",
     ],
     en: [
@@ -53,6 +53,10 @@ export const ORACLE: Record<Lang, string[]> = {
         "Avoid meetings without an agenda today. And people who say \"quick question\".",
         "You'll make someone laugh today. Yourself, if need be.",
         "Today is a good day to water a plant. It deserves it.",
+        "Someone in the office is thinking of you right now. Probably because you still owe them something.",
+        "Luck is on your side, as long as you don't say tails.",
+        "There's a secret on the whiteboard behind me. No, don't turn around.",
+        "Whoever says \"good morning\" first today wins nothing, but is still a good person.",
     ],
 };
 
