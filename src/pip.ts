@@ -49,7 +49,7 @@ async function openDialog(): Promise<void> {
         dialog = await WA.ui.website.open({
             url: dialogUrl(),
             position: { vertical: "bottom", horizontal: "middle" },
-            size: phone ? { width: "96vw", height: "260px" } : { width: "640px", height: "220px" },
+            size: phone ? { width: "96vw", height: "280px" } : { width: "640px", height: "240px" },
             margin: { bottom: phone ? "110px" : "96px" },
             allowApi: true,
             visible: true,
