@@ -1,6 +1,6 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 //
-// Pip, the court jester in the office garden. Walk up to him and press space (or tap the hint on a phone):
+// Pip, the court jester, standing in front of the whiteboard in the meeting room (top right of the office). Walk up to him and press space (or tap the hint on a phone):
 // his dialogue box opens at the bottom of the screen (pip/index.html, code in src/pip/dialog.ts) and closes
 // when you walk away.
 //
