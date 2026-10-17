@@ -28,6 +28,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 ...getMapsScripts(maps),
+                // Pip's dialogue box (opened by src/pip.ts)
+                pip: "pip/index.html",
             },
         },
     },

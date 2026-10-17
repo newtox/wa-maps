@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pip</title>
+<!-- WorkAdventure's scripting API, served by WorkAdventure itself (this page lives on the same host) -->
+<script src="/iframe_api.js"></script>
+<style>
+  :root {
+    --bg: rgba(27, 31, 52, .96);
+    --line: #f2c94c;
+    --line-dark: #9a6b12;
+    --text: #f5f2ff;
+    --muted: #b9b3d6;
+    --btn: #2d3354;
+    --btn-hover: #3b4370;
+    --accent: #8a4fd0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: transparent; overflow: hidden; }
+  body { font: 15px/1.45 "Segoe UI", Roboto, system-ui, sans-serif; color: var(--text); display: flex; align-items: flex-end; justify-content: center; padding: 6px; }
+  .box {
+    position: relative; width: 100%; height: 100%; display: grid; grid-template-columns: 104px 1fr; gap: 14px;
+    background: var(--bg); border: 3px solid var(--line); border-radius: 14px; padding: 14px 16px 12px;
+    box-shadow: 0 0 0 3px var(--line-dark), 0 10px 30px rgba(0,0,0,.45);
+    animation: pop .18s ease-out;
+  }
+  @keyframes pop { from { transform: translateY(12px); opacity: 0; } to { transform: none; opacity: 1; } }
+  .portrait {
+    width: 104px; height: 104px; border-radius: 10px; align-self: start;
+    background: radial-gradient(circle at 50% 40%, #4b3a7a, #241c3e); border: 2px solid var(--line-dark);
+    display: grid; place-items: center; overflow: hidden;
+  }
+  .portrait div {
+    width: 96px; height: 96px; image-rendering: pixelated;
+    background-size: 384px 96px; background-repeat: no-repeat;
+    animation: idle 2.6s steps(1) infinite;
+  }
+  .talking .portrait div { animation: talk .35s steps(1) infinite; }
+  @keyframes idle { 0% { background-position: 0 0; } 25% { background-position: -96px 0; } 45% { background-position: -192px 0; } 60% { background-position: 0 0; } 85% { background-position: -288px 0; } }
+  @keyframes talk { 0% { background-position: 0 0; } 50% { background-position: -96px 0; } }
+  .name { position: absolute; top: -14px; left: 130px; background: var(--accent); border: 2px solid var(--line); border-radius: 8px; padding: 1px 10px; font-weight: 700; font-size: 13px; letter-spacing: .02em; }
+  .main { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+  .text { flex: 1; overflow-y: auto; white-space: pre-line; padding-top: 4px; padding-right: 6px; cursor: pointer; }
+  .text .caret { display: inline-block; width: 8px; animation: blink .8s steps(1) infinite; color: var(--line); }
+  @keyframes blink { 50% { opacity: 0; } }
+  .options { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 6px; margin-top: 8px; }
+  .options button {
+    font: inherit; font-size: 14px; text-align: left; color: var(--text); background: var(--btn); border: 1px solid rgba(255,255,255,.12);
+    border-radius: 8px; padding: 6px 10px; cursor: pointer; display: flex; gap: 8px; align-items: center; min-width: 0;
+  }
+  .options button:hover, .options button:focus-visible { background: var(--btn-hover); border-color: var(--line); outline: none; }
+  .options button.primary { border-color: rgba(242, 201, 76, .6); }
+  .options button kbd { font: 700 11px/1 ui-monospace, monospace; color: var(--muted); border: 1px solid rgba(255,255,255,.2); border-radius: 4px; padding: 2px 4px; flex: none; }
+  .options button span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .close { position: absolute; top: 6px; right: 8px; background: none; border: 0; color: var(--muted); font-size: 18px; cursor: pointer; line-height: 1; }
+  .close:hover { color: var(--text); }
+  /* phones and tablets: no key hints, bigger buttons, labels may wrap */
+  @media (pointer: coarse) {
+    .options button kbd { display: none; }
+    .options button { min-height: 40px; }
+    .close { font-size: 22px; padding: 4px; }
+  }
+  @media (max-width: 480px) {
+    body { font-size: 14px; }
+    .options button { font-size: 13px; padding: 6px 8px; }
+    .options button span { white-space: normal; line-height: 1.2; }
+    .box { grid-template-columns: 64px 1fr; gap: 10px; padding: 12px; }
+    .portrait { width: 64px; height: 64px; }
+    .portrait div { width: 64px; height: 64px; background-size: 256px 64px; }
+    @keyframes idle { 0% { background-position: 0 0; } 25% { background-position: -64px 0; } 45% { background-position: -128px 0; } 60% { background-position: 0 0; } 85% { background-position: -192px 0; } }
+    @keyframes talk { 0% { background-position: 0 0; } 50% { background-position: -64px 0; } }
+    .name { left: 86px; }
+    .options { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="box" id="box">
+  <div class="name">Pip</div>
+  <button class="close" id="close" aria-label="Schließen">✕</button>
+  <div class="portrait"><div id="face"></div></div>
+  <div class="main">
+    <div class="text" id="text"></div>
+    <div class="options" id="options"></div>
+  </div>
+</div>
+<script type="module" src="../src/pip/dialog.ts"></script>
+</body>
+</html>

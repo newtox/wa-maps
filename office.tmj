@@ -6805,17 +6805,6 @@
      "width": 96,
      "x": 576,
      "y": 544
-    },
-    {
-     "height": 64,
-     "id": 23,
-     "name": "pipPopup",
-     "rotation": 0,
-     "type": "",
-     "visible": true,
-     "width": 128,
-     "x": 560,
-     "y": 496
     }
    ],
    "opacity": 1,
